@@ -21,22 +21,14 @@ dict_translation = {
     "en": word_english,
 }
 
-#for key in dict_language.keys():
-#    dict_translation[key] = [get_translation(word, key) for word in dict_translation["en"]]
-#    with open("words.json", "w") as f:
-#        json.dump(dict_translation, f)
-#
-#with open("words.json", "w") as f:
-#    json.dump(dict_translation, f)
-
 list_word = []
 
-for word in word_english:
+for i, word in enumerate(word_english):
     dict_word = {"en": word}
     for language in dict_language.keys():
         word_translated = get_translation(word, language)
         dict_word.update({language: word_translated})
         logger.info(msg=f"{word}: {word_translated}, {language}")
-    list_word.append(dict_word)
+    list_word.append({"id": i, "word": dict_word})
     with open("words.json", "w") as f:
         json.dump(list_word, f)
