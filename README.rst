@@ -11,6 +11,11 @@ List is composed of:
 .. code-block:: bash
 
     [
-        {id: number, word: {language: translation}},
+        {
+            id: number, 
+            word: {
+                language: translation
+            }
+        },
         ...
     ]
