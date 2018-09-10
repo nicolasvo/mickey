@@ -11,6 +11,6 @@ List is composed of:
 .. code-block:: bash
 
     [
-        {id: X, word: {"en": Y, "fr": Z}},
-        {...}
+        {id: number, word: {language: translation}},
+        ...
     ]
