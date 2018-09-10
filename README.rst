@@ -14,7 +14,8 @@ List is composed of:
         {
             id: number, 
             word: {
-                language: translation
+                language: translation,
+                ...
             }
         },
         ...
